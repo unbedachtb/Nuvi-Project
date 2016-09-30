@@ -7,7 +7,7 @@ angular.module("app").service("mainService", function($http){
       return results.data;
     })
   }
-  this.submit = function(text) {
-    console.log("hit");
-  }
+  // this.submit = function(text) {
+  //   console.log(text);
+  // }
 })

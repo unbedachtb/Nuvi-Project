@@ -1,5 +1,6 @@
 angular.module("app").controller("mainCtrl", function($scope, mainService){
   $scope.show = false;
+  $scope.commentHide = true;
   $scope.showData = function() {
     mainService.getData()
       .then(function(results) {
@@ -10,8 +11,8 @@ angular.module("app").controller("mainCtrl", function($scope, mainService){
 
   $scope.submit = function(text) {
     if(text !== "") {
-      $scope.text = "fun";
-      mainService.submit();
+      $scope.commentHide = false;
+      $scope.yourComment = text;
     }
     }
   $scope.clicked = function(likes) {
