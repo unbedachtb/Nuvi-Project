@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css?family=Slabo+27px';
+body {
+  background-color: #000000;
+}
+header {
+  background-color: #83C05A;
+  height: 20vh;
+  padding-bottom: 80px;
+}
+.nuvi {
+  color: #424242;
+  font-family: 'Slabo 27px', serif;
+  font-size: 150px;
+  text-align: center;
+  padding-top: 10px;
+}
+.dataWrapper {
+  border: solid #424242 thick;
+  padding-bottom: 30px;
+  border-bottom: none;
+}
+.provider {
+  color: #53C6DD;
+  font-family: 'Slabo 27px', serif;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 40px;
+}
+.activityMessageandAttachmentContainer {
+  margin-top: 40px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+.activityMessageText {
+  color: #83C05A;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+.activityAttachmentText {
+  color: #83C05A;
+  font-family: 'Slabo 27px', serif;
+  text-align: center;
+}
+.otherDataContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.label {
+  color: #83C05A;
+  font-family: 'Slabo 27px', serif;
+}
+.otherData {
+  color: #FAFAFA;
+  font-family: 'Slabo 27px', serif;
+}
+.activityMessage2 {
+  color: #FAFAFA;
+}

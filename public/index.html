@@ -2,35 +2,42 @@
 <html ng-app="app">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nuvi-Project</title>
+        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/reset.css">
     </head>
     <body ng-controller="mainCtrl">
-        <div ng-repeat="item in data">
-            <!-- <img ng-src = "{{item.actor_avator}}" /> -->
-            <!-- {{item.id}} -->
-            <!-- {{item.actor_description}} -->
-            <!-- {{item.actor_name}} -->
-            <!-- {{item.actor_url}} -->
-            {{item.provider}}
-            {{item.actor_username}}
-            <!-- {{item.activity_url}} -->
-            <!-- {{item.activity_latitude}} -->
-            <!-- {{item.activity_longitude}} -->
-            <!-- <div class="activityMessage">
-                <img ng-src="{{item.activity_message}}" />
-            </div> -->
-            {{item.activity_date}}
-            {{item.activity_likes}}
-            <!-- {{item.activity_shares}} -->
-            {{item.activity_comments}}
-            <div>
-                <img ng-src="{{item.activity_attachment}}" />
+        <header>
+            <p class="nuvi">NUVI</p>
+        </header>
+        <div class="dataWrapper" ng-repeat="item in data">
+            <p class="provider">{{item.provider}}</p>
+            <div class="activityMessageandAttachmentContainer">
+                <div class="activityMessage">
+                    <p class="activityMessageText">Activity Message</p>
+                    <img ng-src="{{item.activity_message}}"/>
+                </div>
+                <div>
+                    <p class="activityAttachmentText">Activity Attachment</p>
+                    <img ng-src="{{item.activity_attachment}}"/>
+                </div>
             </div>
+            <div class="otherDataContainer">
+            <p class="activityMessage2"><span class="label">message: </span>
+              {{item.activity_message}}
+            </p>
+            <p class="otherData"><span class="label">username:</span> {{item.actor_username}}</p>
+            <p class="otherData"><span class="label">date:</span> {{item.activity_date}}</p>
+            <p class="otherData"><span class="label">likes:</span> {{item.activity_likes}}</p>
+            <!-- {{item.activity_shares}} -->
+            <p class="otherData"><span class="label">comments:</span> {{item.activity_comments}}</p>
             <!-- {{item.activity_attachment_type}} -->
             <!-- {{item.activity_sentiment}} -->
             <!-- {{item.activity_attachment}} -->
             <!-- {{item.activity_attachment}} -->
         </div>
+      </div>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
         <script src="javascript/app.js"></script>
