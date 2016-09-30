@@ -4,6 +4,7 @@ angular.module("app").service("mainService", function($http){
       method: 'GET',
       url: "https://nuvi-challenge.herokuapp.com/activities"
     }).then(function(results) {
+      console.log(results.data);
       return results.data;
     })
   }
