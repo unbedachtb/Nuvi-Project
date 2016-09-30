@@ -8,11 +8,12 @@ angular.module("app").controller("mainCtrl", function($scope, mainService){
       })
   }
   $scope.showData();
-
-  $scope.submit = function(text) {
+  $scope.submit = function(text, id, numberOfComments) {
+    console.log(numberOfComments);
     if(text !== "") {
       $scope.commentHide = false;
       $scope.yourComment = text;
+      $scope.number = numberOfComments++;
     }
     }
   $scope.clicked = function(likes) {

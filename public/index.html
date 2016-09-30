@@ -16,11 +16,11 @@
             <div class="inputandLikeContainer">
                 <div class="comment">
                     <p class="label">Comment on this post</p>
-                    <form ng-submit="submit(text)">
+                    <form ng-submit="submit(text, item.id, item.activity_comments)">
                         <textarea ng-model="text" cols="70" rows="50"></textarea>
                     <div class="commentsAndSubmitContainer">
                         <p class="otherData">
-                            <span class="label">Comments:</span>
+                            <span ng-model="number" class="label">Comments:</span>
                             {{item.activity_comments}}</p>
                         <p>{{comment}}</p>
                         <button type="submit">Submit Comment</button>
@@ -31,12 +31,12 @@
                 <p class="labelForComment">Your comment</p>
                 <div class="addedComment"><p class="commentAddedText">{{yourComment}}</p></div>
               </div>
-                <div class="likeButton" ng-click="clicked(item.activity_likes)">
+                <div class="likeButton" ng-init="count=item.activity_likes" ng-click="count = count + 1">
                     <p class="likeLabel">Like this post</p>
                     <img ng-src="images/likebutton.png"/>
                     <p class="otherData">
                         <span class="likeLabel2">Likes:</span>
-                        {{item.activity_likes}}</p>
+                         {{count}}</p>
                 </div>
             </div>
             <div class="activityMessageandAttachmentContainer">
