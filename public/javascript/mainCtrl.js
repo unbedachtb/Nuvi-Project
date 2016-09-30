@@ -7,9 +7,12 @@ angular.module("app").controller("mainCtrl", function($scope, mainService){
       })
   }
   $scope.showData();
-  $scope.text = '';
-  $scope.submit = function() {
-      scope.text = '';
+
+  $scope.submit = function(text) {
+    if(text !== "") {
+      $scope.text = "fun";
+      mainService.submit();
+    }
     }
   $scope.clicked = function(likes) {
     mainService.click(likes).then(function(response) {

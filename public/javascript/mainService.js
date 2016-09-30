@@ -7,7 +7,7 @@ angular.module("app").service("mainService", function($http){
       return results.data;
     })
   }
-  this.click = function(likes) {
-    return likes + 1;
+  this.submit = function(text) {
+    console.log("hit");
   }
 })

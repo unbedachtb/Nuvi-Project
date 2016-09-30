@@ -16,41 +16,43 @@
           <div class="inputandLikeContainer">
             <div class="comment">
               <p class="label">Comment on this post</p>
-              <form ng-submit="submit()">
-            <textarea ng-model="text" cols="70" rows="50"></textarea>
+              <form ng-submit="submit(text)">
+            <!-- <textarea ng-model="text" cols="70" rows="50"></textarea> -->
+            <input ng-model="text" />
+            <button type="submit">Submit Comment</button>
             </form>
             <div class="commentsAndSubmitContainer">
             <p class="otherData"><span class="label">Comments:</span> {{item.activity_comments}}</p>
-            <button type="submit">Submit Comment</button>
+            <p>{{comment}}</p>
           </div>
-          </div>
+        </div>
             <div class="likeButton" ng-click="clicked(item.activity_likes)">
               <p class="likeLabel">Like this post</p>
               <img ng-src="images/likebutton.png" /><p class="otherData"><span class="likeLabel2">Likes:</span> {{item.activity_likes}}</p></div>
           </div>
             <div class="activityMessageandAttachmentContainer">
-                <div class="activityMessage">
+                <!-- <div class="activityMessage">
                     <p class="activityMessageText">Message Image</p>
                     <object data="{{item.activity_message}}" type="image/png">
                     <img ng-src="images/noimage2.png"/>
                   </object>
-                </div>
-                <div>
+                </div> -->
+                <!-- <div>
                     <p class="activityAttachmentText">Attachment</p>
                     <img ng-src="{{item.activity_attachment || 'images/noimage2.png'}}" />
-                </div>
+                </div> -->
             </div>
             <div class="otherDataContainer">
-              <div>
+              <!-- <div>
             <p class="activityMessage2"><span class="label">Message or image link: </span>
               {{item.activity_message}}
             </p>
-          </div>
+          </div> -->
             <p class="otherData"><span class="label">Username:</span> {{item.actor_username}}</p>
             <p class="otherData"><span class="label">Date:</span> {{item.activity_date}}</p>
         </div>
       </div>
-        <!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"></script> -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
         <script src="javascript/app.js"></script>
         <script src="javascript/mainCtrl.js"></script>
