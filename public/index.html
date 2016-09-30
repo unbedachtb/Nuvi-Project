@@ -21,9 +21,9 @@
                     <div class="commentsAndSubmitContainer">
                         <p class="otherData">
                             <span ng-model="number" class="label">Comments:</span>
-                            {{item.activity_comments}}</p>
+                            {{countComment}}</p>
                         <p>{{comment}}</p>
-                        <button type="submit">Submit Comment</button>
+                        <button ng-init="countComment = item.activity_comments" ng-click="countComment = countComment + 1" type="submit">Submit Comment</button>
                         </form>
                     </div>
                 </div>
