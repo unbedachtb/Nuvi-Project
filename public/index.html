@@ -16,11 +16,17 @@
           <div class="inputandLikeContainer">
             <div class="comment">
               <p class="label">Comment on this post</p>
-            <textarea ng-model="text" id="description" name="description" cols="70" rows="50"></textarea>
+              <form ng-submit="submit()">
+            <textarea ng-model="text" cols="70" rows="50"></textarea>
+            </form>
+            <div class="commentsAndSubmitContainer">
+            <p class="otherData"><span class="label">Comments:</span> {{item.activity_comments}}</p>
+            <button type="submit">Submit Comment</button>
           </div>
-            <div class="likeButton" ng-click="">
+          </div>
+            <div class="likeButton" ng-click="clicked(item.activity_likes)">
               <p class="likeLabel">Like this post</p>
-              <img ng-src="images/likebutton.png" /></div>
+              <img ng-src="images/likebutton.png" /><p class="otherData"><span class="likeLabel2">Likes:</span> {{item.activity_likes}}</p></div>
           </div>
             <div class="activityMessageandAttachmentContainer">
                 <div class="activityMessage">
@@ -42,8 +48,6 @@
           </div>
             <p class="otherData"><span class="label">Username:</span> {{item.actor_username}}</p>
             <p class="otherData"><span class="label">Date:</span> {{item.activity_date}}</p>
-            <p class="otherData"><span class="label">Likes:</span> {{item.activity_likes}}</p>
-            <p class="otherData"><span class="label">Comments:</span> {{item.activity_comments}}</p>
         </div>
       </div>
         <!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"></script> -->
