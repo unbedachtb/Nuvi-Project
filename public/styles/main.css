@@ -31,6 +31,7 @@ header {
 .inputandLikeContainer {
   display: flex;
   justify-content: space-around;
+  margin-left: -85px;
 }
 .comment {
   text-align: center;
@@ -45,9 +46,22 @@ input[type="text"], textarea, select {
     outline: none;
     font-size: 15px;
 }
+.likeLabel {
+  color: #83C05A;
+  font-family: 'Slabo 27px', serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.likeButton {
+  margin-left: -100px;
+}
 .likeButton img {
   width: 110px;
   height: 100px;
+}
+.likeButton:hover {
+  cursor: pointer;
 }
 .activityMessageandAttachmentContainer {
   margin-top: 40px;
