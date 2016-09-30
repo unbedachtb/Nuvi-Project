@@ -12,7 +12,14 @@
             <p class="nuvi">NUVI</p>
         </header>
         <div class="dataWrapper" ng-repeat="item in data">
-            <p class="provider">{{item.provider}}</p>
+          <p class="provider">{{item.provider}}</p>
+          <div class="inputandLikeContainer">
+            <div class="comment">
+              <p class="label">Comment on this post</p>
+            <textarea ng-model="text" id="description" name="description" cols="70" rows="50"></textarea>
+          </div>
+            <div class="likeButton" ng-click=""><img ng-src="images/likebutton.png" /></div>
+          </div>
             <div class="activityMessageandAttachmentContainer">
                 <div class="activityMessage">
                     <p class="activityMessageText">Message Image</p>
