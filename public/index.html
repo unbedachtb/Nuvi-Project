@@ -11,7 +11,9 @@
         <header>
             <p class="nuvi">NUVI</p>
         </header>
-        <div company-charts></div>
+        <canvas id="bar" class="chart chart-bar"
+  chart-data="data" chart-labels="labels" chart-series="series">
+</canvas>
         <div class="dataWrapper" ng-repeat="item in data">
             <p class="provider">{{item.provider}}</p>
             <div class="inputandLikeContainer">
@@ -70,9 +72,11 @@
         </div>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/angular.chartjs/1.0.3/angular-chart.js"></script>
         <script src="javascript/app.js"></script>
         <script src="javascript/mainCtrl.js"></script>
+        <script src="javascript/chartsCtrl.js"></script>
         <script src="javascript/mainService.js"></script>
     </body>
 </html>

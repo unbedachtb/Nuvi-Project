@@ -16,11 +16,15 @@ angular.module("app").controller("mainCtrl", function($scope, mainService){
       // $scope.commentHide = false;
       // $scope.yourComment = text;
       $scope.reset.$setPristine();
-      $scope.model = '';
     }
-
     }
-  // $scope.clicked = function(likes) {
+    $scope.charts = function() {
+      mainService.charts()
+      .then(function(results) {
+        $scope.chart = results;
+      })
+    }
+   // $scope.clicked = function(likes) {
   //   mainService.click(likes).then(function(response) {
   //     $scope.likes = response;
   //   });
