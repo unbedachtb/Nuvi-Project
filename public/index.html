@@ -11,13 +11,14 @@
         <header>
             <p class="nuvi">NUVI</p>
         </header>
+        <div company-charts></div>
         <div class="dataWrapper" ng-repeat="item in data">
             <p class="provider">{{item.provider}}</p>
             <div class="inputandLikeContainer">
                 <div class="comment">
                     <p class="label">Comment on this post</p>
-                    <form ng-submit="submit(text, item.id, item.activity_comments)">
-                        <textarea ng-model="text" cols="70" rows="50"></textarea>
+                    <form name="reset" ng-submit="submit(text, $index)" ng-click="textClear(text)">
+                        <textarea  ng-model="text" cols="70" rows="50"></textarea>
                     <div class="commentsAndSubmitContainer">
                         <p class="otherData">
                             <span ng-model="number" class="label">Comments:</span>
@@ -29,7 +30,7 @@
                 </div>
                 <div class="containerForYourComment" ng-hide="commentHide">
                 <p class="labelForComment">Your comment</p>
-                <div class="addedComment"><p class="commentAddedText">{{yourComment}}</p></div>
+                <div class="addedComment"><p  class="commentAddedText">{{yourComment}}</p></div>
               </div>
                 <div class="likeButton" ng-init="count=item.activity_likes" ng-click="count = count + 1">
                     <p class="likeLabel">Like this post</p>

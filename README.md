@@ -29,7 +29,10 @@ Manually write an HTTP request to get the JSON data at the endpoint in a plain t
 
 Step 1 - Get the data from the RESTful JSON endpoint
 Step 2 - Use ng-repeat to get the data that I want
-  ERRORS WITH LOADING IMAGES - it displays fine, but I think that it really increases page loading time
+  ERRORS WITH LOADING IMAGES
+  SLOW LOADING TIME DUE TO SO MANY DOM ELEMENTS
 Step 3 - Style data
 Step 4 - Add comment box and like button
-Step 5 - Get data to the RESTful endpoint
+Step 5 - Get make the data more interactive
+  BUGS WITH COMMENTS AND CLEARING TEXT AREA box
+Step 6 - Bonus - Make a social media visualization dashboard
