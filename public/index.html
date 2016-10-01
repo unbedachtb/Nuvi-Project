@@ -64,12 +64,13 @@
                     <span class="label">Username:</span>
                     {{item.actor_username}}</p>
                 <p class="otherData">
-                    <span class="label">Date:</span>
-                    {{item.activity_date}}</p>
+                    <span class="label" ng-date>Date:</span>
+                    {{item.activity_date | date : medium : timezone}}</p>
             </div>
         </div>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
         <script src="javascript/app.js"></script>
         <script src="javascript/mainCtrl.js"></script>
         <script src="javascript/mainService.js"></script>
