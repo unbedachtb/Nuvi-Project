@@ -1,0 +1,173 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+body {
+  background-color: #2a2a2a;
+}
+header {
+  background-color: #2a2a2a;
+  width: auto;
+  height: 175px;
+}
+header p {
+  color: #53C6DD;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 7rem;
+  text-align: center;
+  padding-top: 10px;
+  /*border: solid #424242 thick;*/
+  border-bottom: none;
+}
+.dataWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.itemWrapper {
+  width: 37vw;
+  height:31vh;
+  border: solid #424242 thin;
+  margin-bottom: 30px;
+  background: #3f3f3f;
+  box-shadow: 10px 5px 5px black;
+}
+.identityWrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 55%;
+  height: 25%;
+  border: black solid thin;
+}
+.identityWrapper img {
+  width: 50px;
+  height: 50px;
+  background: #fafafa;
+}
+.nameUsernameWrapper {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.name {
+
+}
+.username {
+
+}
+/*.provider {
+  color: #53C6DD;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 20px;
+}
+.commentLikeContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-left: -85px;
+}
+.comment {
+  text-align: center;
+  margin-top: 20px;
+}
+.label {
+  color: #83C05A;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+textarea {
+  margin-top: 5px;
+  width: 300px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+.commentNumberSubmitContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.otherData {
+  color: #FAFAFA;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+input[type="text"], textarea, select {
+    outline: none;
+    font-size: 15px;
+}
+.containerForYourComment {
+  margin-top: 20px;
+}
+.labelForComment {
+  color: #83C05A;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-left: 85px;
+}
+.yourCommentBox {
+  width: 300px;
+  height: 110px;
+  background: #FAFAFA;
+  padding-top: 10px;
+  overflow: auto;
+  margin-right: 200px;
+  padding-left: 5px;
+}
+.yourActualComment {
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+}
+.likeButton {
+  margin-left: -100px;
+}
+.likeLabel {
+  color: #83C05A;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.likeLabel2 {
+  color: #83C05A;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.likeButton img {
+  width: 110px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+.likeButton:hover {
+  cursor: pointer;
+}
+.messageAttachmentContainer {
+  margin-top: 40px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+.activityMessageLabel {
+  color: #83C05A;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.activityAttachmentLabel {
+  color: #83C05A;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.otherDataContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+.activityMessage {
+  color: #FAFAFA;
+  font-size: 20px;
+}*/

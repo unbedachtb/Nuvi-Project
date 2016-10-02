@@ -1,0 +1,74 @@
+<header>
+    <p class="nuvi">NUVI</p>
+</header>
+<div class="dataWrapper">
+    <div class="itemWrapper" ng-repeat="item in data">
+      <div class="firstRowWrapper">
+      <div class="identityWrapper">
+        <img ng-src="{{item.actor_avator}}" />
+        <div class="nameUsernameWrapper">
+          <p class="name">{{item.actor_name}}</p>
+          <p class="username">{{item.actor_username}}</p>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+<!-- <p class="provider">{{item.provider}}</p>
+    <div class="commentLikeContainer">
+        <div class="comment">
+            <p class="label">Comment on this post</p>
+            <form ng-submit="submit(text, $index)">
+                <textarea ng-model="text" cols="70" rows="50"></textarea>
+                <div class="commentNumberSubmitContainer">
+                    <p class="otherData">
+                        <span class="label">Comments:</span>
+                        {{countComment}}</p>
+                    <p>{{comment}}</p>
+                    <button ng-init="countComment = item.activity_comments" ng-click="countComment = countComment + 1" type="submit">Submit Comment</button>
+                </form>
+            </div>
+        </div>
+        <div class="containerForYourComment" ng-hide="commentHide">
+            <p class="labelForComment">Your comment</p>
+            <div class="yourCommentBox">
+                <p class="yourActualComment">{{yourComment}}</p>
+            </div>
+        </div>
+        <div class="likeButton" ng-init="count=item.activity_likes" ng-click="count = count + 1">
+            <p class="likeLabel">Like this post</p>
+            <img ng-src="images/likebutton.png"/>
+            <p class="otherData">
+                <span class="likeLabel2">Likes:</span>
+                {{count}}</p>
+        </div>
+    </div>
+    <div class="messageAttachmentContainer">
+        <div>
+            <p class="activityMessageLabel">Message Image</p>
+            <object data="{{item.activity_message}}" type="image/png">
+                <img ng-src="images/noimage2.png"/>
+            </object>
+        </div>
+        <div>
+            <p class="activityAttachmentLabel">Attachment</p>
+            <img ng-src="{{item.activity_attachment || 'images/noimage2.png'}}"/>
+        </div>
+    </div>
+    <div class="otherDataContainer">
+        <div>
+            <p class="activityMessage">
+                <span class="label">Message or image link:
+                </span>
+                {{item.activity_message}}
+            </p>
+        </div>
+        <p class="otherData">
+            <span class="label">Username:</span>
+            {{item.actor_username}}</p>
+        <p class="otherData">
+            <span class="label" ng-date>Date:</span>
+            {{item.activity_date | date : medium : timezone}}</p>
+    </div>
+</div> -->

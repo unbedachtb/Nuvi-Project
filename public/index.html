@@ -4,79 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Nuvi-Project</title>
-        <link rel="stylesheet" type="text/css" href="styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/home.css">
         <link rel="stylesheet" type="text/css" href="styles/reset.css">
     </head>
-    <body ng-controller="mainCtrl">
-        <header>
-            <p class="nuvi">NUVI</p>
-        </header>
-        <canvas id="bar" class="chart chart-bar"
-  chart-data="data" chart-labels="labels" chart-series="series">
-</canvas>
-        <div class="dataWrapper" ng-repeat="item in data">
-            <p class="provider">{{item.provider}}</p>
-            <div class="inputandLikeContainer">
-                <div class="comment">
-                    <p class="label">Comment on this post</p>
-                    <form name="reset" ng-submit="submit(text, $index)" ng-click="textClear(text)">
-                        <textarea  ng-model="text" cols="70" rows="50"></textarea>
-                    <div class="commentsAndSubmitContainer">
-                        <p class="otherData">
-                            <span ng-model="number" class="label">Comments:</span>
-                            {{countComment}}</p>
-                        <p>{{comment}}</p>
-                        <button ng-init="countComment = item.activity_comments" ng-click="countComment = countComment + 1" type="submit">Submit Comment</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="containerForYourComment" ng-hide="commentHide">
-                <p class="labelForComment">Your comment</p>
-                <div class="addedComment"><p  class="commentAddedText">{{yourComment}}</p></div>
-              </div>
-                <div class="likeButton" ng-init="count=item.activity_likes" ng-click="count = count + 1">
-                    <p class="likeLabel">Like this post</p>
-                    <img ng-src="images/likebutton.png"/>
-                    <p class="otherData">
-                        <span class="likeLabel2">Likes:</span>
-                         {{count}}</p>
-                </div>
-            </div>
-            <div class="activityMessageandAttachmentContainer">
-                <div class="activityMessage">
-                    <p class="activityMessageText">Message Image</p>
-                    <object data="{{item.activity_message}}" type="image/png">
-                        <img ng-src="images/noimage2.png"/>
-                    </object>
-                </div>
-                <div>
-                    <p class="activityAttachmentText">Attachment</p>
-                    <img ng-src="{{item.activity_attachment || 'images/noimage2.png'}}"/>
-                </div>
-            </div>
-            <div class="otherDataContainer">
-                <div>
-                    <p class="activityMessage2">
-                        <span class="label">Message or image link:
-                        </span>
-                        {{item.activity_message}}
-                    </p>
-                </div>
-                <p class="otherData">
-                    <span class="label">Username:</span>
-                    {{item.actor_username}}</p>
-                <p class="otherData">
-                    <span class="label" ng-date>Date:</span>
-                    {{item.activity_date | date : medium : timezone}}</p>
-            </div>
-        </div>
+    <body ng-controller="homeCtrl">
+      <div ui-view></div>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
         <script src="https://cdn.jsdelivr.net/angular.chartjs/1.0.3/angular-chart.js"></script>
         <script src="javascript/app.js"></script>
-        <script src="javascript/mainCtrl.js"></script>
-        <script src="javascript/chartsCtrl.js"></script>
+        <script src="javascript/controllers/homeCtrl.js"></script>
+        <script src="javascript/controllers/chartsCtrl.js"></script>
         <script src="javascript/mainService.js"></script>
     </body>
 </html>
