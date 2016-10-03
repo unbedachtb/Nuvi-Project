@@ -1,32 +1,28 @@
-angular.module("app").controller("homeCtrl", function($scope, mainService){
-  $scope.show = false;
-  $scope.textToHideOnClick = false;
-  $scope.commentHide = true;
-  $scope.showData = function() {
-    mainService.getData()
-      .then(function(results) {
-          $scope.data = results;
-      })
+angular.module("app").controller("homeCtrl", function($scope, mainService) {
+  $scope.dataCircle = true;
+	$scope.dataBox = true;
+	$scope.commentHide = true;
+	$scope.showData = function() {
+		mainService.getData().then(function(results) {
+			$scope.data = results;
+		})
+	}
+	$scope.showData();
+  $scope.dataCircleClick = function($index) {
+    $scope.dataBox = false;
+    $scope.dataCircle = false;
   }
-  $scope.showData();
-  $scope.text = "";
-  $scope.submit = function(text, index) {
-    console.log(index);
-    if(text !== "") {
-      // $scope.commentHide = false;
-      // $scope.yourComment = text;
-      $scope.reset.$setPristine();
-    }
-    }
-    $scope.charts = function() {
-      mainService.charts()
-      .then(function(results) {
-        $scope.chart = results;
-      })
-    }
-   // $scope.clicked = function(likes) {
-  //   mainService.click(likes).then(function(response) {
-  //     $scope.likes = response;
-  //   });
-  // }
+  $scope.dataBoxClick = function($index) {
+    $scope.dataBox = true;
+    $scope.dataCircle = false;
+  }
+	// $scope.text = "";
+	// $scope.submit = function(text, index) {
+	// 	console.log(index);
+	// 	if (text !== "") {
+	// 		$scope.commentHide = false;
+	// 		$scope.yourComment = text;
+	// 		$scope.reset.$setPristine();
+	// 	}
+	// }
 });

@@ -2,19 +2,29 @@
     <p class="nuvi">NUVI</p>
 </header>
 <div class="dataWrapper">
-    <div class="itemWrapper" ng-repeat="item in data">
-      <div class="firstRowWrapper">
-      <div class="identityWrapper">
-        <img ng-src="{{item.actor_avator}}" />
-        <div class="nameUsernameWrapper">
-          <p class="name">{{item.actor_name}}</p>
-          <p class="username">{{item.actor_username}}</p>
-        </div>
-      </div>
+  <div class="itemWrapper2" ng-repeat="item in data track by $index" ng-click="dataCircleClick($index)" ng-show="dataCircle">
+  </div>
+
+
+<!-- second project start -->
+<div class="itemWrapper1" ng-repeat="item in data" ng-hide="dataBox" ng-click="dataBoxClick($index)">
+  <div class="firstRowWrapper">
+  <div class="identityWrapper">
+    <img ng-src="{{item.actor_avator}}" />
+    <div class="nameUsernameWrapper">
+      <p class="name">{{item.actor_name}}</p>
+      <p class="username">{{item.actor_username}}</p>
     </div>
-    </div>
+  </div>
+</div>
+</div>
 </div>
 
+
+
+
+
+<!-- first project start -->
 <!-- <p class="provider">{{item.provider}}</p>
     <div class="commentLikeContainer">
         <div class="comment">

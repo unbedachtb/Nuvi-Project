@@ -5,7 +5,7 @@ body {
 header {
   background-color: #2a2a2a;
   width: auto;
-  height: 175px;
+  height: 150px;
 }
 header p {
   color: #53C6DD;
@@ -21,13 +21,21 @@ header p {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.itemWrapper {
+.itemWrapper1 {
   width: 37vw;
   height:31vh;
   border: solid #424242 thin;
   margin-bottom: 30px;
   background: #3f3f3f;
   box-shadow: 10px 5px 5px black;
+}
+.itemWrapper2 {
+  border: solid white thin;
+  border-radius: 100%;
+  width: 70px;
+  height:70px;
+  margin-bottom: 30px;
+  margin-right: 10px;
 }
 .identityWrapper {
   display: flex;
