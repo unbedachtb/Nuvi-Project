@@ -26,7 +26,7 @@ header p {
   height:31vh;
   border: solid #424242 thin;
   margin-bottom: 30px;
-  background: #3f3f3f;
+  background: #bdbdbd;
   box-shadow: 10px 5px 5px black;
 }
 .itemWrapper2 {
@@ -36,6 +36,10 @@ header p {
   height:70px;
   margin-bottom: 30px;
   margin-right: 10px;
+  cursor: pointer;
+}
+.firstRowWrapper {
+  display: flex;
 }
 .identityWrapper {
   display: flex;
@@ -46,11 +50,13 @@ header p {
   width: 55%;
   height: 25%;
   border: black solid thin;
+  border-right: none;
 }
 .identityWrapper img {
   width: 50px;
   height: 50px;
   background: #fafafa;
+  cursor: pointer;
 }
 .nameUsernameWrapper {
   margin-top: 10px;
@@ -61,6 +67,69 @@ header p {
 }
 .username {
 
+}
+.actorDescription {
+  width: 45%;
+  padding-top: 20px;
+  border: black solid thin;
+  border-left: none;
+}
+.message {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.images {
+  display: flex;
+  justify-content: space-around;
+}
+.message2 {
+  width: 50px;
+  height: 50px;
+}
+.attachment {
+  width: 50px;
+  height: 50px;
+}
+.activityUrlDate {
+  display: flex;
+  justify-content: space-between;
+}
+.likeSharesComments {
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  border-left: none;
+  padding-top: 22px;
+}
+.likeButton {
+  display: flex;
+}
+.likeButton img {
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+.shares {
+  display: flex;
+}
+.shareImage {
+  width: 30px;
+  height: 30px;
+  margin-top: -12px;
+  cursor: pointer;
+}
+.comments {
+  display: flex;
+}
+.shareComments {
+  width: 30px;
+  height: 30px;
+  margin-top: -13px;
+  margin-right: 3px;
+  cursor: pointer;
 }
 /*.provider {
   color: #53C6DD;
@@ -141,11 +210,6 @@ input[type="text"], textarea, select {
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   margin-left: 20px;
-}
-.likeButton img {
-  width: 110px;
-  height: 100px;
-  margin-bottom: 5px;
 }
 .likeButton:hover {
   cursor: pointer;
