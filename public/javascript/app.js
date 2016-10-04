@@ -5,10 +5,10 @@ angular.module("app", ["ui.router"]).config(function($stateProvider, $urlRouterP
             templateUrl: 'views/homeview.html',
             controller: 'homeCtrl'
         })
-        .state('item', {
-            url: '/item/:index',
-            templateUrl: 'views/itemview.html'
-        })
+        // .state('chart', {
+        //     url: '/chart',
+        //     templateUrl: '../views/chartview.html'
+        // })
     $urlRouterProvider
         .otherwise('/');
 });

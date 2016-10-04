@@ -2,11 +2,68 @@
     <p class="nuvi">NUVI</p>
 </header>
 <div class="dataWrapper">
-    <div class="itemWrapper2" ng-repeat="item in data"> <a ui-sref="item({index: $index})">
+    <div class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
       <img class="circleAvator" ng-src={{item.actor_avator}} />
-</div></a>
+</div>
 
     <!-- second project start -->
+    <div class="itemWrapper1" ng-hide="dataBox">
+        <div class="firstRowWrapper">
+            <div class="identityWrapper">
+                <img ng-click="dataBoxClick()" ng-src="{{data2.actor_avator}}"/>
+                <div class="nameUsernameWrapper">
+                    <p class="name">{{data2.actor_name}}</p>
+                    <p class="username">{{data2.actor_username}}</p>
+                </div>
+            </div>
+            <p class="actorDescription">{{data2.actor_description}}</p>
+        </div>
+        <div class="message">
+          <object
+            <data ="{{data2.activity_message}}" type="image/png">
+              <img ng-src="images/noimage2.png" />
+            </object>
+            <div class="images">
+                <img class="message2" src="{{data2.activity_message}}"/>
+                <img class="attachment" src="{{data2.activity_attachment ||'images/noimage2.png'}}"/>
+            </div>
+        </div>
+        <!-- <div class="messageAttachmentContainer">
+            <div>
+                <p class="activityMessageLabel">Message Image</p>
+                <object data="{{item.activity_message}}" type="image/png">
+                    <img ng-src="images/noimage2.png"/>
+                </object>
+            </div>
+            <div>
+                <p class="activityAttachmentLabel">Attachment</p>
+                <img ng-src="{{item.activity_attachment || 'images/noimage2.png'}}"/>
+            </div>
+        </div> -->
+        <div class=linkDate>
+        <a href="#"><p><img class="linkImage" ng-src="images/link2.svg" /> {{data2.activity_url}}</p></a>
+        <p class=date>{{data2.activity_date | date:'mediumDate'}}</p>
+      </div>
+        <div class="likeSharesComments">
+            <div class="likeButton" ng-init="count=data2.activity_likes" ng-click="count = count + 1">
+                <img ng-src="images/likebutton.png"/>
+                <p class="otherData">
+                    {{count}}</p>
+            </div>
+            <div class="shares" ng-init="countShares=data2.activity_shares" ng-click="countShares = countShares + 1">
+                <img class="shareImage" ng-src="images/share.svg.png"/>
+                <p>
+                    {{countShares}}</p>
+                    </div>
+                <div class="comments" ng-init="countComments=data2.activity_comments" ng-click="countComments = countComments + 1">
+                    <img class="shareComments" ng-src="images/comments.svg.png"/>
+                    <p>
+                        {{countComments}}</p>
+                </div>
+
+
+        </div>
+    </div>
 </div>
 
 <!-- <div class="likesSharesComments">
