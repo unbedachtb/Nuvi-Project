@@ -1,4 +1,4 @@
-angular.module('app').directive('clock', function() {
+angular.module('app').directive('color', function() {
     return {
         restrict: 'E',
         link: function(scope, elem, attr) {

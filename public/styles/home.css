@@ -47,6 +47,9 @@ header p {
   margin-right: 10px;
   cursor: pointer;
 }
+.facebook {
+  border: solid blue thin;
+}
 .circleAvator {
   height: 50px;
   width: 50px;
@@ -94,12 +97,13 @@ header p {
   border-right: none;
   border-left: none;
 }
-.message {
+.message3 {
   width: 100%;
   padding-top: 20px;
   padding-left: 10px;
+  color: black;
 }
-.images {
+.imageMessage {
   display: flex;
   justify-content: space-around;
 }

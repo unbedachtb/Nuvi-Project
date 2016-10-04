@@ -2,7 +2,8 @@
     <p class="nuvi">NUVI</p>
 </header>
 <div class="dataWrapper">
-    <div class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
+    <div ng-class="facebook" class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
+      <div></div>
       <img class="circleAvator" ng-src={{item.actor_avator}} />
 </div>
 
@@ -18,15 +19,16 @@
             </div>
             <p class="actorDescription">{{data2.actor_description}}</p>
         </div>
-        <div class="message">
-          <object
+          <!-- <object
             <data ="{{data2.activity_message}}" type="image/png">
+
               <img ng-src="images/noimage2.png" />
-            </object>
-            <div class="images">
-                <img class="message2" src="{{data2.activity_message}}"/>
+            </object> -->
+
+            <div class="imageMessage">
+
+                <div class="message3"> {{data2.activity_message}}</div>
                 <img class="attachment" src="{{data2.activity_attachment ||'images/noimage2.png'}}"/>
-            </div>
         </div>
         <!-- <div class="messageAttachmentContainer">
             <div>
@@ -45,20 +47,22 @@
         <p class=date>{{data2.activity_date | date:'mediumDate'}}</p>
       </div>
         <div class="likeSharesComments">
-            <div class="likeButton" ng-init="count=data2.activity_likes" ng-click="count = count + 1">
+            <div class="likeButton"  ng-click="countLikes(data2.activity_likes)">
                 <img ng-src="images/likebutton.png"/>
+                <p ng-show="likeStart" class="hideLike">{{data2.activity_likes}}</p>
                 <p class="otherData">
-                    {{count}}</p>
+                    {{total}}</p>
             </div>
-            <div class="shares" ng-init="countShares=data2.activity_shares" ng-click="countShares = countShares + 1">
+            <div class="shares" ng-click="countShares(data2.activity_shares)">
                 <img class="shareImage" ng-src="images/share.svg.png"/>
+                <p ng-show="shareStart">{{data2.activity_shares}}</p>
                 <p>
-                    {{countShares}}</p>
+                    {{totalShares}}</p>
                     </div>
-                <div class="comments" ng-init="countComments=data2.activity_comments" ng-click="countComments = countComments + 1">
-                    <img class="shareComments" ng-src="images/comments.svg.png"/>
+                <div class="comments"  ng-click="countComments(data2.activity_comments)">
+                    <img class="shareComments" ng-src="images/comments.svg.png" />
                     <p>
-                        {{countComments}}</p>
+                        {{data2.activity_comments}}</p>
                 </div>
 
 
