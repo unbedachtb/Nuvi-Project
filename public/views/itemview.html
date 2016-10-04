@@ -1,0 +1,42 @@
+<div class="itemWrapper1">
+    <div class="firstRowWrapper">
+        <div class="identityWrapper">
+            <a ui-sref="home"><img ng-click="dataBoxClick()" ng-src="{{data2.actor_avator}}"/></a>
+            <div class="nameUsernameWrapper">
+                <p class="name">{{data2.actor_name}}</p>
+                <p class="username">{{data2.actor_username}}</p>
+            </div>
+        </div>
+        <p class="actorDescription">{{data2.actor_description}}</p>
+    </div>
+    <div class="message">
+        <p>{{data2.activity_message}}</p>
+        <div class="images">
+            <img class="message2" src="{{data2.activity_message}}"/>
+            <img class="attachment" src="{{data2.activity_attachment}}"/>
+        </div>
+    </div>
+    <div class=linkDate>
+    <a href="#"><p><img class="linkImage" ng-src="images/link2.svg" /> {{div[$index].activity_url}}</p></a>
+    <p class=date>{{data2.activity_date | date:'mediumDate'}}</p>
+  </div>
+    <div class="likeSharesComments">
+        <div class="likeButton" ng-init="count=data2.activity_likes" ng-click="count = count + 1">
+            <img ng-src="images/likebutton.png"/>
+            <p class="otherData">
+                {{count}}</p>
+        </div>
+        <div class="shares" ng-init="countShares=data2.activity_shares" ng-click="countShares = countShares + 1">
+            <img class="shareImage" ng-src="images/share.svg.png"/>
+            <p>
+                {{countShares}}</p>
+                </div>
+            <div class="comments" ng-init="countComments=data.activity_comments" ng-click="countComments = countComments + 1">
+                <img class="shareComments" ng-src="images/comments.svg.png"/>
+                <p>
+                    {{countComments}}</p>
+            </div>
+
+
+    </div>
+</div>

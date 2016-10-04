@@ -2,49 +2,11 @@
     <p class="nuvi">NUVI</p>
 </header>
 <div class="dataWrapper">
-    <div class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($event)" ng-show="dataCircle"></div>
+    <div class="itemWrapper2" ng-repeat="item in data"> <a ui-sref="item({index: $index})">
+      <img class="circleAvator" ng-src={{item.actor_avator}} />
+</div></a>
 
     <!-- second project start -->
-    <div class="itemWrapper1" ng-repeat="item in data" ng-hide="dataBox">
-        <div class="firstRowWrapper">
-            <div class="identityWrapper">
-                <img ng-click="dataBoxClick($event)" ng-src="{{item.actor_avator}}"/>
-                <div class="nameUsernameWrapper">
-                    <p class="name">{{item.actor_name}}</p>
-                    <p class="username">{{item.actor_username}}</p>
-                </div>
-            </div>
-            <p class="actorDescription">{{item.actor_description}}</p>
-        </div>
-        <div class="message">
-            <p ng-if="messageHide">{{item.activity_message}}</p>
-            <div class="images">
-                <img class="message2" src="{{item.activity_message}}"/>
-                <img class="attachment" src="{{item.activity_attachment}}"/>
-            </div>
-        </div>
-        <p>{{item.activity_url}}</p>
-        <p>{{item.activity_date}}</p>
-        <div class="likeSharesComments">
-            <div class="likeButton" ng-init="count=item.activity_likes" ng-click="count = count + 1">
-                <img ng-src="images/likebutton.png"/>
-                <p class="otherData">
-                    {{count}}</p>
-            </div>
-            <div class="shares" ng-init="countShares=item.activity_shares" ng-click="countShares = countShares + 1">
-                <img class="shareImage" ng-src="images/share.svg.png"/>
-                <p>
-                    {{countShares}}</p>
-                    </div>
-                <div class="comments" ng-init="countComments=item.activity_comments" ng-click="countComments = countComments + 1">
-                    <img class="shareComments" ng-src="images/comments.svg.png"/>
-                    <p>
-                        {{countComments}}</p>
-                </div>
-
-
-        </div>
-    </div>
 </div>
 
 <!-- <div class="likesSharesComments">
@@ -58,7 +20,7 @@
     <div class="commentLikeContainer">
         <div class="comment">
             <p class="label">Comment on this post</p>
-            <form ng-submit="submit(text, $index)">
+            <form ng-submit="submit(text, $0)">
                 <textarea ng-model="text" cols="70" rows="50"></textarea>
                 <div class="commentNumberSubmitContainer">
                     <p class="otherData">

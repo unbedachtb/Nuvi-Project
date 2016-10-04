@@ -1,24 +1,29 @@
-angular.module("app").controller("homeCtrl", function($scope, mainService) {
+angular.module("app").controller("homeCtrl", function($scope,$stateParams, mainService) {
+  console.log($stateParams);
   $scope.dataCircle = true;
 	$scope.dataBox = true;
-  $scope.messageHide = true;
-	$scope.commentHide = true;
 	$scope.showData = function() {
 		mainService.getData().then(function(results) {
+      console.log(results);
 			$scope.data = results;
 		})
 	}
 
-
+console.log($stateParams);
 
 	$scope.showData();
-  $scope.dataCircleClick = function($event) {
-    console.log($event);
-      $scope.dataCircle = false;
-      $scope.dataBox = false;
+  $scope.getItem = function(item) {
+    console.log(item);
+    mainService.getItem(item).then(function(results) {
+        $scope.data2.item.index = results;
+        console.log(item);
+        $scope.dataCircle = false;
+        $scope.dataBox = false;
+
+    })
   }
-  $scope.dataBoxClick = function($event) {
-      console.log($event);
+  $scope.getItem($stateParams);
+  $scope.dataBoxClick = function() {
       $scope.dataCircle = true;
       $scope.dataBox = true;
   }
