@@ -8,35 +8,32 @@ header {
   width: auto;
   height: 150px;
 }
-header p {
-  color: #53C6DD;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 7rem;
-  text-align: center;
-  padding-top: 10px;
+header img {
+  padding-top: 30px;
   /*border: solid #424242 thick;*/
-  border-bottom: none;
+  margin-left: 40%;
 }
-.dataWrapper {
+.dataWrapper1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   font-family: 'Open Sans', sans-serif;
 }
-.dataWrapper2 {
+/*.dataWrapper3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   font-family: 'Open Sans', sans-serif;
-}
+}*/
 .itemWrapper1 {
   width: 45vw;
-  height:35vh;
+  height:auto;
   /*border: solid #424242 thin;*/
   margin-bottom: 30px;
   background: gray;
   box-shadow: 10px 5px 5px black;
   border-radius: 25px;
+  margin-left: 17%;
 }
 .itemWrapper2 {
   border: solid white thin;
@@ -98,7 +95,7 @@ header p {
   border-left: none;
 }
 .message3 {
-  width: 100%;
+  width: 60%;
   padding-top: 20px;
   padding-left: 10px;
   color: black;
@@ -106,6 +103,8 @@ header p {
 .imageMessage {
   display: flex;
   justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .message2 {
   width: 50px;
@@ -142,8 +141,7 @@ a {
   justify-content: space-around;
   height: auto;
   border-left: none;
-  padding-top: 22px;
-  margin-top: 10px;
+  margin-top: 45px;
 }
 .likeButton {
   display: flex;
@@ -173,6 +171,16 @@ a {
   margin-top: -13px;
   margin-right: 3px;
   cursor: pointer;
+}
+
+textarea {
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 35%
+}
+form button {
+
 }
 /*.provider {
   color: #53C6DD;

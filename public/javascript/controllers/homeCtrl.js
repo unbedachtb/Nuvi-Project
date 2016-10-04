@@ -2,6 +2,7 @@ angular.module("app").controller("homeCtrl", function($scope, mainService) {
   $scope.dataCircle = true;
   $scope.likeStart = true;
   $scope.shareStart = true;
+  $scope.commentStart = true;
 	$scope.dataBox = true;
 	$scope.showData = function() {
 		mainService.getData().then(function(results) {
@@ -33,7 +34,7 @@ angular.module("app").controller("homeCtrl", function($scope, mainService) {
     $scope.totalShares = shares + 1;
   }
   $scope.countComments = function() {
-
+    mainService
   }
   $scope.dataBoxClick = function() {
       console.log();

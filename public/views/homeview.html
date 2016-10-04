@@ -1,7 +1,7 @@
 <header>
-    <p class="nuvi">NUVI</p>
+    <img class="nuvi" src="images/nuvi-logo.png" />
 </header>
-<div class="dataWrapper">
+<div class="dataWrapper1">
     <div ng-class="facebook" class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
       <div></div>
       <img class="circleAvator" ng-src={{item.actor_avator}} />
@@ -59,15 +59,27 @@
                 <p>
                     {{totalShares}}</p>
                     </div>
-                <div class="comments"  ng-click="countComments(data2.activity_comments)">
+                <div class="comments"  ng-click="countComments(data2.activity_comments)" ng-class=>
                     <img class="shareComments" ng-src="images/comments.svg.png" />
-                    <p>
+                    <p ng-show="commentStart">
                         {{data2.activity_comments}}</p>
                 </div>
 
 
         </div>
+        <form>
+          <form>
+            <textarea ng-model="textComment" placeholder="Your Comment"></textarea>
+            <button ng-click='commentButton()'>Post Comment</button>
+
+            <h4>Comments</h4>
+            <ul>
+              <li ng-repeat='comment in comments'> {{comment}} <a style="float: right;" href="" ng-click="Item($index)"
+              </ul>
+          </form>
+        </form>
     </div>
+
 </div>
 
 <!-- <div class="likesSharesComments">
