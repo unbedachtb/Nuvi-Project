@@ -42,6 +42,16 @@ angular.module("app").controller("homeCtrl", function($scope, mainService) {
 
       $scope.dataBox = true;
   }
+  $scope.comment = $scope.textComment;
+  $scope.commentButtonClick = function(comments) {
+    $scope.array = [];
+    if($scope.textComment !=='') {
+      $scope.textComment='';
+    }
+    $scope.commentStart = false;
+    $scope.totalComments = comments + 1;
+    
+  }
 	// $scope.text = "";
 	// $scope.submit = function(text, index) {
 	// 	console.log(index);

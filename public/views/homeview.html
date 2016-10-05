@@ -1,5 +1,5 @@
 <header>
-    <img class="nuvi" src="images/nuvi-logo.png" />
+    <img ng-click="dataBoxClick()" class="nuvi" src="images/nuvi-logo.png" />
 </header>
 <div class="dataWrapper1">
     <div ng-class="facebook" class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
@@ -8,7 +8,8 @@
 </div>
 
     <!-- second project start -->
-    <div class="itemWrapper1" ng-hide="dataBox">
+    <div class="itemWrapper0" ng-hide="dataBox">
+    <div class="itemWrapper1">
         <div class="firstRowWrapper">
             <div class="identityWrapper">
                 <img ng-click="dataBoxClick()" ng-src="{{data2.actor_avator}}"/>
@@ -59,27 +60,26 @@
                 <p>
                     {{totalShares}}</p>
                     </div>
-                <div class="comments"  ng-click="countComments(data2.activity_comments)" ng-class=>
-                    <img class="shareComments" ng-src="images/comments.svg.png" />
+                <div class="comments">
+                    <img class="commentsImage" ng-src="images/comments.svg.png" />
                     <p ng-show="commentStart">
-                        {{data2.activity_comments}}</p>
+                        {{data2.activity_comments}}</p><p>{{totalComments}}</p>
+
                 </div>
 
 
         </div>
-        <form>
-          <form>
-            <textarea ng-model="textComment" placeholder="Your Comment"></textarea>
-            <button ng-click='commentButton()'>Post Comment</button>
 
-            <h4>Comments</h4>
-            <ul>
-              <li ng-repeat='comment in comments'> {{comment}} <a style="float: right;" href="" ng-click="Item($index)"
-              </ul>
-          </form>
-        </form>
     </div>
-
+    <form>
+      <form>
+        <div class="commentButtonContainer">
+        <textarea ng-model="textComment" placeholder="Your Comment"></textarea>
+        <button ng-click='commentButtonClick(data2.activity_comments)'>Post</button>
+      </div>
+      </form>
+    </form>
+  </div>
 </div>
 
 <!-- <div class="likesSharesComments">

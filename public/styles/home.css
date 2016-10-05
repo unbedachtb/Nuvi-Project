@@ -1,5 +1,35 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat';
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+.loader {
+  position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+  background-color: #545454;
+}
+.loader p {
+  text-align: center;
+  margin-top: 8%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 50px;
+  color: #83C05A;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.gif{
+  margin-left: 47%;
+  margin-top: 5%;
+  width: 50px;
+  height: 50px;
+}
+.loader img {
+  opacity: 0.7;
+}
+.comics {
+  display: flex;
+  justify-content: center;
+  margin-top: 4%;
+}
 body {
   background: #545454;
 }
@@ -12,11 +42,13 @@ header img {
   padding-top: 30px;
   /*border: solid #424242 thick;*/
   margin-left: 40%;
+  cursor: pointer;
 }
 .dataWrapper1 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
   font-family: 'Open Sans', sans-serif;
 }
 /*.dataWrapper3 {
@@ -26,14 +58,15 @@ header img {
   font-family: 'Open Sans', sans-serif;
 }*/
 .itemWrapper1 {
-  width: 45vw;
+  width: 600px;;
   height:auto;
   /*border: solid #424242 thin;*/
-  margin-bottom: 30px;
   background: gray;
   box-shadow: 10px 5px 5px black;
   border-radius: 25px;
-  margin-left: 17%;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .itemWrapper2 {
   border: solid white thin;
@@ -75,6 +108,7 @@ header img {
   background: #fafafa;
   cursor: pointer;
   margin-left: 10px;
+  border-radius: 5px;
 }
 .nameUsernameWrapper {
   margin-top: 10px;
@@ -113,6 +147,8 @@ header img {
 .attachment {
   width: 50px;
   height: 50px;
+  margin-left: 10px;
+  border-radius: 5px;
 }
 a {
   text-decoration: none;
@@ -165,22 +201,50 @@ a {
 .comments {
   display: flex;
 }
-.shareComments {
+.commentsImage {
   width: 30px;
   height: 30px;
   margin-top: -13px;
   margin-right: 3px;
-  cursor: pointer;
 }
-
 textarea {
-  width: 200px;
+  width: 250px;
   height: 40px;
   margin-top: 30px;
-  margin-left: 35%
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 10px 5px 5px black;
+  background: gray;
+    resize: none;
+    outline: none;
+}
+::-webkit-input-placeholder {
+  color: black;
+}
+::-moz-placeholder {
+  color: black;
+}
+.commentButtonContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 58%;
+  margin-top: -20px
 }
 form button {
-
+  width: 40px;
+  height: 20px;
+  background: gray;
+  border:black thin solid;
+  border-radius: 5px;
+  margin-left: 84%;
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+button:focus {outline:0;}
+button:active {
+    vertical-align: top;
+    margin-top: 12px;
+    margin-left: 85%;
 }
 /*.provider {
   color: #53C6DD;
