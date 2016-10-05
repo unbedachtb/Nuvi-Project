@@ -1,152 +1,77 @@
 <header>
-    <img ng-click="dataBoxClick()" class="nuvi" src="images/nuvi-logo.png" />
+    <img ng-click="dataBoxClick()" class="nuvi" src="images/nuvi-logo.png"/>
 </header>
-<div class="subheader">
-  <div class="providerFilter">Provider</div>
-  <div class="likesFilter">Most Likes</div>
-  <div class="sentimentFilter">Sentiment</div>
+<div ng-hide="subheader" class="subheader">
+    <div class="providerFilter" ng-click="sortBy('provider')">Provider</div>
+    <div class="likesFilter" ng-click="sortBy('activity_likes')"> Likes</div>
+    <div class="sentimentFilter" ng-click="sortBy('activity_sentiment')">Sentiment</div>
 </div>
 <div class="dataWrapper1">
-    <div class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
-      <div class="rowWrapper"><img class="circleAvator" ng-src={{item.actor_avator}} /><div class="columnWrapper"><p>{{item.provider}}<p>Sentiment:{{item.activity_sentiment}}</p></div></div>
-</div>
-
-    <!-- second project start -->
-    <div class="itemWrapper0" ng-hide="dataBox">
-    <div class="itemWrapper1">
-        <div class="firstRowWrapper">
-            <div class="identityWrapper">
-                <img ng-click="dataBoxClick()" ng-src="{{data2.actor_avator}}"/>
-                <div class="nameUsernameWrapper">
-                    <p class="name">{{data2.actor_name}}</p>
-                    <p class="username">{{data2.actor_username}}</p>
+    <div class="itemWrapper2" ng-repeat="item in data | orderBy:propertyName:reverse" ng-click="dataCircleClick($index)" ng-show="dataCircle">
+        <div class="rowWrapper"><img class="avator" ng-src={{item.actor_avator}}/>
+            <div class="columnWrapper">
+              <div ng-if="data">
+                <data></data>
+              </div>
+                <p>{{item.provider}}</p>
+                  <p><img class="smallLikeButton" src="images/likebutton.png" />{{item.activity_likes}}</p>
+                    <p>Sentiment:{{item.activity_sentiment}}</p>
                 </div>
             </div>
-            <p class="actorDescription">{{data2.actor_description}}</p>
         </div>
-          <!-- <object
-            <data ="{{data2.activity_message}}" type="image/png">
-
-              <img ng-src="images/noimage2.png" />
-            </object> -->
-
-            <div class="imageMessage">
-                <div class="providerName">{{data2.provider}}</div>
-                <div class="message3"> {{data2.activity_message}}</div>
-                <img class="attachment" src="{{data2.activity_attachment ||'images/noimage2.png'}}"/>
-        </div>
-        <!-- <div class="messageAttachmentContainer">
-            <div>
-                <p class="activityMessageLabel">Message Image</p>
-                <object data="{{item.activity_message}}" type="image/png">
-                    <img ng-src="images/noimage2.png"/>
-                </object>
-            </div>
-            <div>
-                <p class="activityAttachmentLabel">Attachment</p>
-                <img ng-src="{{item.activity_attachment || 'images/noimage2.png'}}"/>
-            </div>
-        </div> -->
-        <div class=linkDate>
-        <a href="#"><p><img class="linkImage" ng-src="images/link2.svg" /> {{data2.activity_url}}</p></a>
-        <p class=date>{{data2.activity_date | date:'mediumDate'}}</p>
-      </div>
-        <div class="likeSharesComments">
-            <div class="likeButton"  ng-click="countLikes(data2.activity_likes)">
-                <img ng-src="images/likebutton.png"/>
-                <p ng-show="likeStart" class="hideLike">{{data2.activity_likes}}</p>
-                <p class="otherData">
-                    {{total}}</p>
-            </div>
-            <div class="shares" ng-click="countShares(data2.activity_shares)">
-                <img class="shareImage" ng-src="images/share.svg.png"/>
-                <p ng-show="shareStart">{{data2.activity_shares}}</p>
-                <p>
-                    {{totalShares}}</p>
+        <div class="itemWrapper0" ng-hide="dataBox">
+            <div class="itemWrapper1">
+                <div class="firstRowWrapper">
+                    <div class="identityWrapper">
+                        <img ng-click="dataBoxClick()" ng-src="{{data2.actor_avator}}"/>
+                        <div class="nameUsernameWrapper">
+                            <p class="name">{{data2.actor_name}}</p>
+                            <p class="username">{{data2.actor_username}}</p>
+                        </div>
                     </div>
-                <div class="comments">
-                    <img class="commentsImage" ng-src="images/comments.svg.png" />
-                    <p ng-show="commentStart">
-                        {{data2.activity_comments}}</p><p>{{totalComments}}</p>
+                    <p class="actorDescription">{{data2.actor_description}}</p>
+                </div>
+                <div class="imageMessage">
+                    <div class="providerName">{{data2.provider}}</div>
+                    <div class="message3">
+                        {{data2.activity_message}}</div>
+                    <img class="attachment" src="{{data2.activity_attachment ||'images/noimage2.png'}}"/>
+                </div>
+                <div class=linkDate>
+                    <a href="#">
+                        <p><img class="linkImage" ng-src="images/link2.svg"/>
+                            {{data2.activity_url}}</p>
+                    </a>
+                    <p class=date>{{data2.activity_date | date:'mediumDate'}}</p>
+                </div>
+                <div class="likeSharesComments">
+                    <div class="likeButton" ng-click="countLikes(data2.activity_likes)">
+                        <img ng-src="images/likebutton.png"/>
+                        <p class="hideLike"></p>
+                        <p class="otherData">{{likes}}
+                            </p>
+                    </div>
+                    <div class="shares" ng-click="countShares(data2.activity_shares)">
+                        <img class="shareImage" ng-src="images/share.svg.png"/>
+                        <p>
+                            {{shares}}</p>
+                    </div>
+                    <div class="comments">
+                        <img class="commentsImage" ng-src="images/comments.svg.png"/>
+                        <p>{{comments}}</p>
+
+                    </div>
 
                 </div>
 
-
-        </div>
-
-    </div>
-    <form>
-      <form>
-        <div class="commentButtonContainer">
-        <textarea ng-model="textComment" placeholder="Your Comment"></textarea>
-        <button ng-click='commentButtonClick(data2.activity_comments)'>Post</button>
-      </div>
-      </form>
-    </form>
-  </div>
-</div>
-
-<!-- <div class="likesSharesComments">
-  <p>Likes:{{item.activity_likes}}</p>
-  <p>Shares:{{item.activity_shares}}</p>
-  <p>Comments:{{item.activity_comments}}</p>
-</div> -->
-
-<!-- first project start -->
-<!-- <p class="provider">{{item.provider}}</p>
-    <div class="commentLikeContainer">
-        <div class="comment">
-            <p class="label">Comment on this post</p>
-            <form ng-submit="submit(text, $0)">
-                <textarea ng-model="text" cols="70" rows="50"></textarea>
-                <div class="commentNumberSubmitContainer">
-                    <p class="otherData">
-                        <span class="label">Comments:</span>
-                        {{countComment}}</p>
-                    <p>{{comment}}</p>
-                    <button ng-init="countComment = item.activity_comments" ng-click="countComment = countComment + 1" type="submit">Submit Comment</button>
+            </div>
+            <form>
+                <form>
+                    <div class="commentButtonContainer">
+                        <textarea ng-model="textComment" placeholder="Your Comment"></textarea>
+                        <button ng-click='commentButtonClick(data2.activity_comments)'>Post</button>
+                    </div>
                 </form>
-            </div>
-        </div>
-        <div class="containerForYourComment" ng-hide="commentHide">
-            <p class="labelForComment">Your comment</p>
-            <div class="yourCommentBox">
-                <p class="yourActualComment">{{yourComment}}</p>
-            </div>
-        </div>
-        <div class="likeButton" ng-init="count=item.activity_likes" ng-click="count = count + 1">
-            <p class="likeLabel">Like this post</p>
-            <img ng-src="images/likebutton.png"/>
-            <p class="otherData">
-                <span class="likeLabel2">Likes:</span>
-                {{count}}</p>
+            </form>
         </div>
     </div>
-    <div class="messageAttachmentContainer">
-        <div>
-            <p class="activityMessageLabel">Message Image</p>
-            <object data="{{item.activity_message}}" type="image/png">
-                <img ng-src="images/noimage2.png"/>
-            </object>
-        </div>
-        <div>
-            <p class="activityAttachmentLabel">Attachment</p>
-            <img ng-src="{{item.activity_attachment || 'images/noimage2.png'}}"/>
-        </div>
-    </div>
-    <div class="otherDataContainer">
-        <div>
-            <p class="activityMessage">
-                <span class="label">Message or image link:
-                </span>
-                {{item.activity_message}}
-            </p>
-        </div>
-        <p class="otherData">
-            <span class="label">Username:</span>
-            {{item.actor_username}}</p>
-        <p class="otherData">
-            <span class="label" ng-date>Date:</span>
-            {{item.activity_date | date : medium : timezone}}</p>
-    </div>
-</div> -->
