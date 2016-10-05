@@ -44,6 +44,22 @@ header img {
   margin-left: 40%;
   cursor: pointer;
 }
+.subheader {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  font-family: 'Open Sans', sans-serif;
+  color: #83C05A;
+}
+.providerFilter {
+  cursor: pointer;
+}
+.likesFilter {
+  cursor: pointer;
+}
+.sentimentFilter {
+  cursor: pointer;
+}
 .dataWrapper1 {
   display: flex;
   flex-wrap: wrap;
@@ -70,12 +86,21 @@ header img {
 }
 .itemWrapper2 {
   border: solid white thin;
-  border-radius: 100%;
-  width: 70px;
+  width: 155px;
   height:70px;
   margin-bottom: 30px;
   margin-right: 10px;
   cursor: pointer;
+}
+.rowWrapper {
+  display: flex;
+}
+.columnWrapper {
+  margin-top: 12px;
+  color: #53C6DD;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .facebook {
   border: solid blue thin;
@@ -127,6 +152,9 @@ header img {
   border-top: none;
   border-right: none;
   border-left: none;
+}
+.providerName {
+  margin-top: 21px;
 }
 .message3 {
   width: 60%;

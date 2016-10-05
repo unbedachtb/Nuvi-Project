@@ -50,7 +50,7 @@ angular.module("app").controller("homeCtrl", function($scope, mainService) {
     }
     $scope.commentStart = false;
     $scope.totalComments = comments + 1;
-    
+    $scope.array2 = $scope.array.push(textComment)
   }
 	// $scope.text = "";
 	// $scope.submit = function(text, index) {

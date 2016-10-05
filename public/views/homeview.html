@@ -1,10 +1,14 @@
 <header>
     <img ng-click="dataBoxClick()" class="nuvi" src="images/nuvi-logo.png" />
 </header>
+<div class="subheader">
+  <div class="providerFilter">Provider</div>
+  <div class="likesFilter">Most Likes</div>
+  <div class="sentimentFilter">Sentiment</div>
+</div>
 <div class="dataWrapper1">
-    <div ng-class="facebook" class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
-      <div></div>
-      <img class="circleAvator" ng-src={{item.actor_avator}} />
+    <div class="itemWrapper2" ng-repeat="item in data" ng-click="dataCircleClick($index)" ng-show="dataCircle">
+      <div class="rowWrapper"><img class="circleAvator" ng-src={{item.actor_avator}} /><div class="columnWrapper"><p>{{item.provider}}<p>Sentiment:{{item.activity_sentiment}}</p></div></div>
 </div>
 
     <!-- second project start -->
@@ -27,7 +31,7 @@
             </object> -->
 
             <div class="imageMessage">
-
+                <div class="providerName">{{data2.provider}}</div>
                 <div class="message3"> {{data2.activity_message}}</div>
                 <img class="attachment" src="{{data2.activity_attachment ||'images/noimage2.png'}}"/>
         </div>
