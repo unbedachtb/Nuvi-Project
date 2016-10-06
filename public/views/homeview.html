@@ -9,14 +9,11 @@
 </div>
 <div class="dataWrapper1">
     <div class="itemWrapper2" ng-repeat="item in data | orderBy:propertyName:reverse" ng-click="dataCircleClick($index)" ng-show="dataCircle">
-        <div class="rowWrapper"><img class="avator" ng-src={{item.actor_avator}}/>
+        <div class="rowWrapper"><img class="avator" src="{{item.actor_avator}}"/>
             <div class="columnWrapper">
-              <div ng-if="data">
-                <data></data>
-              </div>
-                <p class="columnProvider"><img class="landingPageProvider" src = "images/facebook.png"</p>
+                <p class="columnProvider"><img class="landingPageProvider" social-images-directive /></p>
                   <p class="landingPageLikeNumber"><img class="smallLikeButton" src="images/likebutton.png" />{{item.activity_likes}}</p>
-                    <img class="sentimentImage" src="images/smile.png" />
+                    <p><img class="sentimentImage" sentiment-directive />
                 </div>
             </div>
         </div>
