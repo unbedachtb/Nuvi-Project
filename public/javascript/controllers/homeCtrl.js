@@ -26,16 +26,15 @@ angular.module("app").controller("homeCtrl", function($scope, mainService) {
       $scope.likes = results.activity_likes;
       $scope.shares = results.activity_shares;
       $scope.comments = results.activity_comments;
+
 		})
 	}
 
 	$scope.countLikes = function(likes) {
-		// $scope.likeStart = false;
 		$scope.likes = likes + 1;
 	}
 
 	$scope.countShares = function(shares) {
-		// $scope.shareStart = false;
 		$scope.shares = shares + 1;
 	}
 
@@ -50,7 +49,6 @@ angular.module("app").controller("homeCtrl", function($scope, mainService) {
 		if ($scope.textComment !== '') {
 			$scope.textComment = '';
 		}
-		// $scope.commentStart = false;
 		$scope.comments = comments + 1;
 		$scope.array2 = $scope.array.push($scope.textComment)
 	}

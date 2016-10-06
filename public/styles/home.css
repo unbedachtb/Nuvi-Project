@@ -13,10 +13,17 @@ header img {
   margin-left: 40%;
   cursor: pointer;
 }
+.realTimeSocialMedia {
+  text-align: center;
+  margin-right: 24px;
+  margin-top: 10px;
+  font-family: 'Open Sans', sans-serif;
+  color: #53C6DD;
+}
 .subheader {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   font-family: 'Open Sans', sans-serif;
   color: #83C05A;
 }
@@ -41,7 +48,7 @@ header img {
   height:auto;
   /*border: solid #424242 thin;*/
   background: gray;
-  box-shadow: 10px 5px 5px black;
+  box-shadow: 5px 4px 4px black;
   border-radius: 25px;
   padding-bottom: 10px;
   margin-left: auto;
@@ -49,6 +56,8 @@ header img {
 }
 .itemWrapper2 {
   border: solid white thin;
+  background: #696969;
+  box-shadow: 2px 2px 2px black;
   width: 170px;
   height:90px;
   margin-bottom: 30px;
@@ -68,6 +77,10 @@ header img {
 }
 .columnWrapper p {
   padding-bottom: 8px;
+}
+.columnProvider {
+  font-weight: 800;
+  color: #83C05A;
 }
 .smallLikeButton {
   width: 15px;
@@ -212,7 +225,7 @@ textarea {
   margin-top: 30px;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 10px 5px 5px black;
+  box-shadow: 4px 3px 3px black;
   background: gray;
     resize: none;
     outline: none;
@@ -237,7 +250,7 @@ form button {
   border-radius: 5px;
   margin-left: 84%;
   margin-top: 10px;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 2px 1px 1px black;
 }
 button:focus {outline:0;}
 button:active {

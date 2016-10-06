@@ -1,10 +1,11 @@
 <header>
     <img ng-click="dataBoxClick()" class="nuvi" src="images/nuvi-logo.png"/>
+    <p class="realTimeSocialMedia">Real-time social media data visualizations</p>
 </header>
 <div ng-hide="subheader" class="subheader">
-    <div class="providerFilter" ng-click="sortBy('provider')">Provider</div>
-    <div class="likesFilter" ng-click="sortBy('activity_likes')"> Likes</div>
-    <div class="sentimentFilter" ng-click="sortBy('activity_sentiment')">Sentiment</div>
+    <div class="providerFilter" ng-click="sortBy('provider')"><i class="fa fa-filter" aria-hidden="true"></i> Provider</div>
+    <div class="likesFilter" ng-click="sortBy('activity_likes')"><i class="fa fa-filter" aria-hidden="true"></i> Likes</div>
+    <div class="sentimentFilter" ng-click="sortBy('activity_sentiment')"><i class="fa fa-filter" aria-hidden="true"></i> Sentiment</div>
 </div>
 <div class="dataWrapper1">
     <div class="itemWrapper2" ng-repeat="item in data | orderBy:propertyName:reverse" ng-click="dataCircleClick($index)" ng-show="dataCircle">
@@ -13,7 +14,7 @@
               <div ng-if="data">
                 <data></data>
               </div>
-                <p>{{item.provider}}</p>
+                <p class="columnProvider">{{item.provider}}</p>
                   <p><img class="smallLikeButton" src="images/likebutton.png" />{{item.activity_likes}}</p>
                     <p>Sentiment:{{item.activity_sentiment}}</p>
                 </div>
