@@ -27,6 +27,10 @@ header img {
   font-family: 'Open Sans', sans-serif;
   color: #83C05A;
 }
+.subheader :hover {
+  font-weight: 900;
+  color: #689948;
+}
 .providerFilter {
   cursor: pointer;
 }
@@ -58,9 +62,9 @@ header img {
   border: solid white thin;
   background: #696969;
   box-shadow: 2px 2px 2px black;
-  width: 170px;
+  width: 110px;
   height:90px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   margin-right: 10px;
   cursor: pointer;
   padding-right: 10px;
@@ -69,8 +73,15 @@ header img {
   display: flex;
   justify-content: space-between;
 }
+.landingPageProvider {
+  width: 20px;
+  height: 20px;
+}
+.twitterImage {
+  background-image: url(../images/twitter.png);
+}
 .columnWrapper {
-  margin-top: 12px;
+  margin-top: 8px;
   color: #53C6DD;
   display: flex;
   flex-direction: column;
@@ -85,6 +96,13 @@ header img {
 .smallLikeButton {
   width: 15px;
   height: 15px;
+}
+.landingPageLikeNumber {
+  font-size: 9px;
+}
+.sentimentImage {
+  width: 20px;
+  height: 20px;
 }
 .facebook {
   border: solid blue thin;

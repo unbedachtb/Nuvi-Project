@@ -17,6 +17,7 @@ angular.module("app").controller("homeCtrl", function($scope, mainService) {
 
 	$scope.dataCircleClick = function(index) {
 		mainService.getItem(index).then(function(results) {
+      console.log(index);
 			$scope.data2 = results;
 			$scope.dataCircle = false;
 			$scope.dataBox = false;
