@@ -8,9 +8,15 @@ header {
   width: auto;
   height: 150px;
 }
-header img {
+.nuviBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.nuvi {
   padding-top: 30px;
-  margin-left: 40%;
+  width: 12%;
+  height: 5%;
   cursor: pointer;
 }
 .realTimeSocialMedia {

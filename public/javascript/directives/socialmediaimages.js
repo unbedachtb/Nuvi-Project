@@ -1,7 +1,6 @@
 angular.module('app').directive('socialImagesDirective', function() {
   return {
     link: function(scope, element, attrribute) {
-      console.log(scope.$index);
         if(scope.data[scope.$index].provider === 'facebook') {
           element.attr("src", "./images/facebook.png")
         }

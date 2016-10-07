@@ -1,19 +1,27 @@
 <header>
+  <div class="nuviBox">
     <img ng-click="dataBoxClick()" class="nuvi" src="images/nuvi-logo.png"/>
+  </div>
     <p class="realTimeSocialMedia">Real-time social media data visualizations</p>
 </header>
 <div ng-hide="subheader" class="subheader">
-    <div class="providerFilter" ng-click="sortBy('provider')"><i class="fa fa-filter" aria-hidden="true"></i> Provider</div>
-    <div class="likesFilter" ng-click="sortBy('activity_likes')"><i class="fa fa-filter" aria-hidden="true"></i> Likes</div>
-    <div class="sentimentFilter" ng-click="sortBy('activity_sentiment')"><i class="fa fa-filter" aria-hidden="true"></i> Sentiment</div>
+    <div class="providerFilter" ng-click="sortBy('provider')">
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        Provider</div>
+    <div class="likesFilter" ng-click="sortBy('activity_likes')">
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        Likes</div>
+    <div class="sentimentFilter" ng-click="sortBy('activity_sentiment')">
+        <i class="fa fa-filter" aria-hidden="true"></i>
+        Sentiment</div>
 </div>
 <div class="dataWrapper1">
     <div class="itemWrapper2" ng-repeat="item in data | orderBy:propertyName:reverse" ng-click="dataCircleClick($index)" ng-show="dataCircle">
         <div class="rowWrapper"><img class="avator" src="{{item.actor_avator}}"/>
             <div class="columnWrapper">
-                <p class="columnProvider"><img class="landingPageProvider" social-images-directive /></p>
-                  <p class="landingPageLikeNumber"><img class="smallLikeButton" src="images/likebutton.png" />{{item.activity_likes}}</p>
-                    <p><img class="sentimentImage" sentiment-directive />
+                <p class="columnProvider"><img class="landingPageProvider" social-images-directive/></p>
+                <p class="landingPageLikeNumber"><img class="smallLikeButton" src="images/likebutton.png"/>{{item.activity_likes}}</p>
+                <p><img class="sentimentImage" sentiment-directive/>
                 </div>
             </div>
         </div>
@@ -47,7 +55,7 @@
                         <img ng-src="images/likebutton.png"/>
                         <p class="hideLike"></p>
                         <p class="otherData">{{likes}}
-                            </p>
+                        </p>
                     </div>
                     <div class="shares" ng-click="countShares(data2.activity_shares)">
                         <img class="shareImage" ng-src="images/share.svg.png"/>
