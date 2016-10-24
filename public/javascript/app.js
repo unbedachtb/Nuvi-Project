@@ -2,7 +2,7 @@ angular.module("app", ["ui.router"]).config(function($stateProvider, $urlRouterP
     $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: 'views/homeview.html',
+            templateUrl: 'public/views/homeview.html',
             controller: 'homeCtrl'
         })
     $urlRouterProvider

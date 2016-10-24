@@ -1,6 +1,6 @@
 <header>
   <div class="nuviBox">
-    <img ng-click="dataBoxClick()" class="nuvi" src="images/nuvi-logo.png"/>
+    <img ng-click="dataBoxClick()" class="nuvi" src="public/images/nuvi-logo.png"/>
   </div>
     <p class="realTimeSocialMedia">Real-time social media data visualizations</p>
 </header>
@@ -20,7 +20,7 @@
         <div class="rowWrapper"><img class="avator" src="{{item.actor_avator}}"/>
             <div class="columnWrapper">
                 <p class="columnProvider"><img class="landingPageProvider" social-images-directive/></p>
-                <p class="landingPageLikeNumber"><img class="smallLikeButton" src="images/likebutton.png"/>{{item.activity_likes}}</p>
+                <p class="landingPageLikeNumber"><img class="smallLikeButton" src="public/images/likebutton.png"/>{{item.activity_likes}}</p>
                 <p><img class="sentimentImage" sentiment-directive/>
                 </div>
             </div>
@@ -41,29 +41,29 @@
                     <div class="providerName">{{data2.provider}}</div>
                     <div class="message3">
                         {{data2.activity_message}}</div>
-                    <img class="attachment" src="{{data2.activity_attachment ||'images/noimage2.png'}}"/>
+                    <img class="attachment" src="{{data2.activity_attachment ||'public/images/noimage2.png'}}"/>
                 </div>
                 <div class=linkDate>
                     <a href="#">
-                        <p><img class="linkImage" ng-src="images/link2.svg"/>
+                        <p><img class="linkImage" ng-src="public/images/link2.svg"/>
                             {{data2.activity_url}}</p>
                     </a>
                     <p class=date>{{data2.activity_date | date:'mediumDate'}}</p>
                 </div>
                 <div class="likeSharesComments">
                     <div class="likeButton" ng-click="countLikes(data2.activity_likes)">
-                        <img ng-src="images/likebutton.png"/>
+                        <img ng-src="public/images/likebutton.png"/>
                         <p class="hideLike"></p>
                         <p class="otherData">{{likes}}
                         </p>
                     </div>
                     <div class="shares" ng-click="countShares(data2.activity_shares)">
-                        <img class="shareImage" ng-src="images/share.svg.png"/>
+                        <img class="shareImage" ng-src="public/images/share.svg.png"/>
                         <p>
                             {{shares}}</p>
                     </div>
                     <div class="comments">
-                        <img class="commentsImage" ng-src="images/comments.svg.png"/>
+                        <img class="commentsImage" ng-src="public/images/comments.svg.png"/>
                         <p>{{comments}}</p>
 
                     </div>
